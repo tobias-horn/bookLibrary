@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/d77e7351a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+<div class="container">
+    <div class="instructions">
+        <h1>Your personal book library</i></h1>
+        <p>This is a digital library to store all the books you have read or you want to read in the future</p>
+        <p>To add a new book, please press the "Add new" button. Once you add a book, the sample books will disappear to make place for your entries</p>
+    </div>
+    <div class="controls">
+        <button id="addBookButton"><span class="fas fa-plus"></span> Add new</button>
+    </div>
+    <div class="popup" id="popup">
+        <button id="closePopup"><span class="far fa-times-circle"></span></button>
+        
+        <div class="form-wrapper">
+            <form data-book-input>
+                <label for="bookTitle">Book Title</label><br>
+                <input class="text-input" type="text" id="bookTitle" name="title"><br>
+                <label for="bookAuthor">Book Author</label><br>
+                <input class="text-input" type="text" id="bookAuthor" name="bookAuthor"><br>
+                <label for="bookPages">Pages</label><br>
+                <input class="text-input" type="number" id="bookPages" name="bookPages"><br>
+                <p>Have you read the book?</p>
+                <input type="checkbox" id="bookRead" name="bookRead" value="true">
+                <label for="bookRead">Yes I did</label><br>
+                <div data-rating-wrapper class="rating-wrapper">
+                </div>
+                <input id="submit" type="submit" value="Add to Library">
+            </form>
+        </div>
+    </div>
+    <div class="cards-container" id="bookContainer">
+        <div class="card" data-card-index="0">
+            <ul>
+                <li><span>Title: </span>Life 3.0: Being Human in the Age of Artificial Intelligence</li>
+                <li><span>Author: </span>Max Tegmark </li>
+                <li><span>Pages: </span>384</li>
+                <li><span>Read: </span>Yes</li>
+                <li><span>Rating:</span>
+                    <span class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                </li>
+            </ul>
+            <div class="card-controls">
+                
+                <button class="button-delete" data-delete><span class="fas fa-trash"></span></button>
+            </div>
+        </div>
+
+        <div class="card" data-card-index="1">
+            <ul>
+                <li><span>Title: </span>Steve Jobs</li>
+                <li><span>Author: </span>Walter Isaacson </li>
+                <li><span>Pages: </span>627</li>
+                <li><span>Read: </span>Yes</li>
+                <li><span>Rating:</span>
+                    <span class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                </li>
+            </ul>
+            <div class="card-controls">
+                
+                <button class="button-delete" data-delete><span class="fas fa-trash"></span></button>
+            </div>
+        </div>
+        
+        
+        <div class="card" data-card-index="2">
+            <ul>
+                <li><span>Title: </span>Dune</li>
+                <li><span>Author: </span>Frank Herbert</li>
+                <li><span>Pages: </span>583</li>
+                <li><span>Read: </span>Yes</li>
+                <li><span>Rating:</span>
+                    <span class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                    <span  class="fas fa-star star"></span>
+                </li>
+            </ul>
+            <div class="card-controls">
+                
+                <button class="button-delete" data-delete><span class="fas fa-trash"></span></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
